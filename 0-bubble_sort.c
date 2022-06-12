@@ -12,6 +12,7 @@
  *
  * @array: array that contains the numbers to be sorted
  * @size: the number of elements of the array
+ * Return: void
 */
 void bubble_sort(int *array, size_t size)
 {
