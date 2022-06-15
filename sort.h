@@ -42,4 +42,5 @@ void quick_sort_hoare(int *array, size_t size);
 void sort(int *array, size_t size, int start, int end);
 int partitioning(int *array, size_t size, int start, int end);
 void swap_arr(int *array, size_t size, int start, int end);
+int swap_opposite(listint_t **list, listint_t *current);
 #endif
