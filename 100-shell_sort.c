@@ -68,5 +68,5 @@ size_t knuth_sequence(size_t old_gap)
 		temp = (new_gap * 3) + 1;
 	}
 
-	return (new_gap); 
+	return (new_gap);
 }
