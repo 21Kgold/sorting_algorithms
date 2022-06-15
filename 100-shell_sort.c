@@ -25,7 +25,7 @@ void shell_sort(int *array, size_t size)
 
 	for (; gap > 0 ;)
 	{
-		for (j = 0 ; j + gap <= size - j ; j++)
+		for (j = 0 ; j + gap <= size ; j++)
 		{
 			for (i = j ; i + gap < size - l ;)
 			{
@@ -68,5 +68,5 @@ size_t knuth_sequence(size_t old_gap)
 		temp = (new_gap * 3) + 1;
 	}
 
-	return (new_gap);
+	return (new_gap); 
 }
