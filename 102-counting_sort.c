@@ -15,21 +15,16 @@
 void counting_sort(int *array, size_t size)
 {
 	size_t index = 0, key = 0, position = 0, keys_range;
-	int max; 
-	int *key_array;
-	int *ordered_array;
+	int max;
+	int *key_array, *ordered_array;
 
 	if (array == NULL || size < 2)
-	{
 		return;
-	}
 	max = find_max(array, size);
 	keys_range = (size_t)max + 1;
 	key_array = malloc(sizeof(int) * keys_range);
 	if (key_array == NULL)
-	{
 		return;
-	}
 	ordered_array = malloc(sizeof(int) * size);
 	if (ordered_array == NULL)
 	{
@@ -37,18 +32,14 @@ void counting_sort(int *array, size_t size)
 		return;
 	}
 	for (key = 0; key < keys_range ; key++)
-	{
 		key_array[key] = 0;
-	}
 	for (index = 0 ; index < size ; index++)
 	{
 		key = array[index];
 		key_array[key] += 1;
 	}
 	for (key = 1 ; key < keys_range ; key++)
-	{
 		key_array[key] += key_array[key - 1];
-	}
 	print_array(key_array, keys_range);
 	for (index = 0 ; index < size ; index++)
 	{
