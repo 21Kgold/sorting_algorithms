@@ -23,6 +23,7 @@ typedef struct listint_s
 void print_array(const int *array, size_t size);
 void print_list(const listint_t *list);
 size_t knuth_sequence(size_t maximum);
+int find_max(int *array, size_t size);
 
 /* Sorting functions*/
 void bubble_sort(int *array, size_t size);
